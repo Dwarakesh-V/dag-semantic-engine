@@ -1,0 +1,169 @@
+{
+  "root": {
+    "id": "n0",
+    "intent": "Travel planner",
+    "examples": [
+      "book a trip",
+      "plan a journey",
+      "travel planning",
+      "i want to travel"
+    ],
+    "children": ["n1", "n2", "n3"]
+  },
+
+  "n1": {
+    "id": "n1",
+    "intent": "Book a trip",
+    "examples": [
+      "book a trip",
+      "plan a vacation",
+      "schedule travel"
+    ],
+    "children": ["n10", "n20"]
+  },
+
+  "n10": {
+    "id": "n10",
+    "intent": "Fix trip dates",
+    "examples": [
+      "from DATE to DATE",
+      "travel between DATE and DATE",
+      "dates are DATE to DATE"
+    ],
+    "threshold_modifier": 0.9,
+    "children": ["n11", "n12"]
+  },
+
+  "n11": {
+    "id": "n11",
+    "intent": "Fix start date",
+    "examples": [
+      "from DATE",
+      "starting DATE",
+      "beginning on DATE"
+    ],
+    "sibling_penalty": true,
+    "children": ["n111"]
+  },
+
+  "n111": {
+    "id": "n111",
+    "intent": "Confirm start date",
+    "examples": [
+      "yes start on DATE",
+      "that start date works",
+      "confirm DATE as start"
+    ],
+    "children": []
+  },
+
+  "n12": {
+    "id": "n12",
+    "intent": "Fix end date",
+    "examples": [
+      "to DATE",
+      "return on DATE",
+      "ending DATE"
+    ],
+    "sibling_penalty": true,
+    "children": ["n121"]
+  },
+
+  "n121": {
+    "id": "n121",
+    "intent": "Confirm end date",
+    "examples": [
+      "yes return on DATE",
+      "end date is fine",
+      "confirm DATE as return"
+    ],
+    "children": []
+  },
+
+  "n20": {
+    "id": "n20",
+    "intent": "Fix trip location",
+    "examples": [
+      "travel to PLACE",
+      "go to PLACE",
+      "trip destination PLACE"
+    ],
+    "threshold_modifier": 0.9,
+    "children": ["n21", "n22"]
+  },
+
+  "n21": {
+    "id": "n21",
+    "intent": "Fix origin place",
+    "examples": [
+      "from PLACE",
+      "leaving PLACE",
+      "starting at PLACE"
+    ],
+    "sibling_penalty": true,
+    "children": ["n211"]
+  },
+
+  "n211": {
+    "id": "n211",
+    "intent": "Confirm origin place",
+    "examples": [
+      "yes from PLACE",
+      "confirm origin PLACE"
+    ],
+    "children": []
+  },
+
+  "n22": {
+    "id": "n22",
+    "intent": "Fix destination place",
+    "examples": [
+      "to PLACE",
+      "destination PLACE",
+      "going to PLACE"
+    ],
+    "sibling_penalty": true,
+    "children": ["n221"]
+  },
+
+  "n221": {
+    "id": "n221",
+    "intent": "Confirm destination place",
+    "examples": [
+      "yes going to PLACE",
+      "confirm destination PLACE"
+    ],
+    "children": []
+  },
+
+  "n2": {
+    "id": "n2",
+    "intent": "Cancel trip",
+    "examples": [
+      "cancel my trip",
+      "i dont want to travel anymore"
+    ],
+    "children": ["n30"]
+  },
+
+  "n30": {
+    "id": "n30",
+    "intent": "Request refund",
+    "examples": [
+      "i want a refund",
+      "money back",
+      "refund my booking"
+    ],
+    "children": []
+  },
+
+  "n3": {
+    "id": "n3",
+    "intent": "Trip feedback",
+    "examples": [
+      "the trip was bad",
+      "i didnt enjoy the trip"
+    ],
+    "children": []
+  }
+}
