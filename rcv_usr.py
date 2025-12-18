@@ -8,6 +8,7 @@ from sentence_transformers import SentenceTransformer
 # Custom
 import cache_graph
 from json_parser import build_tree
+from core_pass import iter_pass
 
 FILENAME_BASE = "nodes.json"
 FILENAME_CACHED = "nodes.pkl"
@@ -25,6 +26,6 @@ if not exists(FILENAME_CACHED):
 
 root_node = cache_graph.load_graph_cache(FILENAME_CACHED)
 
-from core_pass import single_level_pass
-
-print(single_level_pass(root_node,MODEL.encode("Book a trip a India on 13th of February",convert_to_tensor=True),"Book a trip a India on 13th of February"))
+if __name__ == "__main__":
+    print("\nREADY\n")
+    iter_pass(input("You: "),root_node)
