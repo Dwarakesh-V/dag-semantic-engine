@@ -216,7 +216,7 @@ The frontend exists to interact with the engine visually and does not affect rou
 
 ## Performance
 
-- ~89% intent routing accuracy (domain-specific evaluation)
+- ~91% intent routing accuracy (domain-specific evaluation)
 - ~100ms average CPU-only inference latency
 - Cached embeddings for fast traversal
 - Deterministic execution with no external dependencies
