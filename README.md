@@ -251,6 +251,5 @@ The focus is **intent routing**, not automation.
 
 ---
 
-## Summary
-
-This engine demonstrates how structured graphs, semantic similarity, and careful confidence control can replace fragile rule-based systems for intent routing - while remaining transparent, debuggable, and fast.
+## Demo
+This project is hosted on hugging face spaces with a different dataset for demonstration: https://huggingface.co/spaces/Dwarakesh-V/semantic-analyzer
