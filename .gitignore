@@ -1,2 +1,4 @@
 __pycache__
 retrieval_store.json
+.vscode
+*.pkl

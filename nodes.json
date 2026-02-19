@@ -1,168 +1,322 @@
 {
   "root": {
-    "id": "n0",
-    "intent": "Travel planner",
+    "id": "f0",
+    "intent": "Fitness & Wellness Coach",
     "examples": [
-      "book a trip",
-      "plan a journey",
-      "travel planning",
-      "i want to travel"
+      "help me get fit",
+      "i want to improve my health",
+      "fitness advice",
+      "be my workout coach"
     ],
-    "children": ["n1", "n2", "n3"]
+    "children": ["f1", "f2", "f3", "f4", "f5"]
   },
 
-  "n1": {
-    "id": "n1",
-    "intent": "Book a trip",
+  "f1": {
+    "id": "f1",
+    "intent": "Workout Routines",
     "examples": [
-      "book a trip",
-      "plan a vacation",
-      "schedule travel"
+      "give me a workout",
+      "create an exercise plan",
+      "home workout",
+      "gym routine"
     ],
-    "children": ["n10", "n20"]
+    "children": ["f10", "f11", "f12", "f13"]
   },
 
-  "n10": {
-    "id": "n10",
-    "intent": "Fix trip dates",
+  "f10": {
+    "id": "f10",
+    "intent": "Beginner Workout",
     "examples": [
-      "from DATE to DATE",
-      "travel between DATE and DATE",
-      "dates are DATE to DATE"
+      "beginner workout",
+      "easy routine",
+      "i am new to fitness"
     ],
-    "threshold_modifier": 0.9,
-    "children": ["n11", "n12"]
+    "children": ["f101", "f102"]
   },
 
-  "n11": {
-    "id": "n11",
-    "intent": "Fix start date",
+  "f101": {
+    "id": "f101",
+    "intent": "Beginner Full Body",
     "examples": [
-      "from DATE",
-      "starting DATE",
-      "beginning on DATE"
-    ],
-    "sibling_penalty": true,
-    "children": ["n111"]
-  },
-
-  "n111": {
-    "id": "n111",
-    "intent": "Confirm start date",
-    "examples": [
-      "yes start on DATE",
-      "that start date works",
-      "confirm DATE as start"
+      "full body beginner workout",
+      "simple full body routine"
     ],
     "children": []
   },
 
-  "n12": {
-    "id": "n12",
-    "intent": "Fix end date",
+  "f102": {
+    "id": "f102",
+    "intent": "Beginner Cardio",
     "examples": [
-      "to DATE",
-      "return on DATE",
-      "ending DATE"
-    ],
-    "sibling_penalty": true,
-    "children": ["n121"]
-  },
-
-  "n121": {
-    "id": "n121",
-    "intent": "Confirm end date",
-    "examples": [
-      "yes return on DATE",
-      "end date is fine",
-      "confirm DATE as return"
+      "beginner cardio",
+      "easy cardio workout"
     ],
     "children": []
   },
 
-  "n20": {
-    "id": "n20",
-    "intent": "Fix trip location",
+  "f11": {
+    "id": "f11",
+    "intent": "Strength Training",
     "examples": [
-      "travel to PLACE",
-      "go to PLACE",
-      "trip destination PLACE"
+      "strength workout",
+      "build muscle",
+      "weight training routine"
     ],
-    "threshold_modifier": 0.9,
-    "children": ["n21", "n22"]
+    "children": ["f111", "f112", "f113"]
   },
 
-  "n21": {
-    "id": "n21",
-    "intent": "Fix origin place",
+  "f111": {
+    "id": "f111",
+    "intent": "Upper Body Strength",
     "examples": [
-      "from PLACE",
-      "leaving PLACE",
-      "starting at PLACE"
-    ],
-    "sibling_penalty": true,
-    "children": ["n211"]
-  },
-
-  "n211": {
-    "id": "n211",
-    "intent": "Confirm origin place",
-    "examples": [
-      "yes from PLACE",
-      "confirm origin PLACE"
+      "upper body workout",
+      "arm and chest workout"
     ],
     "children": []
   },
 
-  "n22": {
-    "id": "n22",
-    "intent": "Fix destination place",
+  "f112": {
+    "id": "f112",
+    "intent": "Lower Body Strength",
     "examples": [
-      "to PLACE",
-      "destination PLACE",
-      "going to PLACE"
-    ],
-    "sibling_penalty": true,
-    "children": ["n221"]
-  },
-
-  "n221": {
-    "id": "n221",
-    "intent": "Confirm destination place",
-    "examples": [
-      "yes going to PLACE",
-      "confirm destination PLACE"
+      "leg workout",
+      "lower body routine"
     ],
     "children": []
   },
 
-  "n2": {
-    "id": "n2",
-    "intent": "Cancel trip",
+  "f113": {
+    "id": "f113",
+    "intent": "Core Strength",
     "examples": [
-      "cancel my trip",
-      "i dont want to travel anymore"
-    ],
-    "children": ["n30"]
-  },
-
-  "n30": {
-    "id": "n30",
-    "intent": "Request refund",
-    "examples": [
-      "i want a refund",
-      "money back",
-      "refund my booking"
+      "abs workout",
+      "core exercises"
     ],
     "children": []
   },
 
-  "n3": {
-    "id": "n3",
-    "intent": "Trip feedback",
+  "f12": {
+    "id": "f12",
+    "intent": "Cardio Workouts",
     "examples": [
-      "the trip was bad",
-      "i didnt enjoy the trip"
+      "cardio routine",
+      "fat burning workout",
+      "endurance training"
+    ],
+    "children": ["f121", "f122"]
+  },
+
+  "f121": {
+    "id": "f121",
+    "intent": "HIIT Workout",
+    "examples": [
+      "hiit workout",
+      "high intensity training"
+    ],
+    "children": []
+  },
+
+  "f122": {
+    "id": "f122",
+    "intent": "Low Impact Cardio",
+    "examples": [
+      "low impact cardio",
+      "joint friendly cardio"
+    ],
+    "children": []
+  },
+
+  "f13": {
+    "id": "f13",
+    "intent": "Stretching & Mobility",
+    "examples": [
+      "stretching routine",
+      "mobility exercises",
+      "flexibility workout"
+    ],
+    "children": ["f131", "f132"]
+  },
+
+  "f131": {
+    "id": "f131",
+    "intent": "Morning Stretch",
+    "examples": [
+      "morning stretch routine",
+      "wake up stretches"
+    ],
+    "children": []
+  },
+
+  "f132": {
+    "id": "f132",
+    "intent": "Post Workout Stretch",
+    "examples": [
+      "cool down stretches",
+      "after workout stretch"
+    ],
+    "children": []
+  },
+
+  "f2": {
+    "id": "f2",
+    "intent": "Nutrition Advice",
+    "examples": [
+      "diet tips",
+      "what should i eat",
+      "nutrition advice"
+    ],
+    "children": ["f20", "f21", "f22", "f23"]
+  },
+
+  "f20": {
+    "id": "f20",
+    "intent": "Weight Loss Nutrition",
+    "examples": [
+      "diet for weight loss",
+      "fat loss meal tips"
+    ],
+    "children": []
+  },
+
+  "f21": {
+    "id": "f21",
+    "intent": "Muscle Gain Nutrition",
+    "examples": [
+      "diet for muscle gain",
+      "bulking meal plan"
+    ],
+    "children": []
+  },
+
+  "f22": {
+    "id": "f22",
+    "intent": "Healthy Snacks",
+    "examples": [
+      "healthy snack ideas",
+      "low calorie snacks"
+    ],
+    "children": []
+  },
+
+  "f23": {
+    "id": "f23",
+    "intent": "Hydration Advice",
+    "examples": [
+      "how much water should i drink",
+      "hydration tips"
+    ],
+    "children": []
+  },
+
+  "f3": {
+    "id": "f3",
+    "intent": "Mental Wellness",
+    "examples": [
+      "stress relief tips",
+      "mental health advice",
+      "how to relax"
+    ],
+    "children": ["f30", "f31", "f32"]
+  },
+
+  "f30": {
+    "id": "f30",
+    "intent": "Breathing Exercises",
+    "examples": [
+      "breathing exercise",
+      "calm down technique"
+    ],
+    "children": []
+  },
+
+  "f31": {
+    "id": "f31",
+    "intent": "Sleep Improvement",
+    "examples": [
+      "how to sleep better",
+      "sleep tips"
+    ],
+    "children": []
+  },
+
+  "f32": {
+    "id": "f32",
+    "intent": "Mindfulness Practice",
+    "examples": [
+      "mindfulness exercise",
+      "how to meditate"
+    ],
+    "children": []
+  },
+
+  "f4": {
+    "id": "f4",
+    "intent": "Progress & Motivation",
+    "examples": [
+      "motivate me",
+      "i feel like quitting",
+      "how to stay consistent"
+    ],
+    "children": ["f40", "f41"]
+  },
+
+  "f40": {
+    "id": "f40",
+    "intent": "Overcome Plateau",
+    "examples": [
+      "not seeing progress",
+      "hit a plateau"
+    ],
+    "children": []
+  },
+
+  "f41": {
+    "id": "f41",
+    "intent": "Build Consistency",
+    "examples": [
+      "how to stay consistent",
+      "build workout habit"
+    ],
+    "children": []
+  },
+
+  "f5": {
+    "id": "f5",
+    "intent": "Fitness Education",
+    "examples": [
+      "what is bmi",
+      "explain calories",
+      "how muscles grow"
+    ],
+    "children": ["f50", "f51", "f52"]
+  },
+
+  "f50": {
+    "id": "f50",
+    "intent": "Explain Calories",
+    "examples": [
+      "what are calories",
+      "calorie explanation"
+    ],
+    "children": []
+  },
+
+  "f51": {
+    "id": "f51",
+    "intent": "Explain Macros",
+    "examples": [
+      "what are macros",
+      "protein carbs fats explained"
+    ],
+    "children": []
+  },
+
+  "f52": {
+    "id": "f52",
+    "intent": "Explain Muscle Growth",
+    "examples": [
+      "how do muscles grow",
+      "muscle hypertrophy explained"
     ],
     "children": []
   }
